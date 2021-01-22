@@ -60,6 +60,10 @@ const showNextSaleOnMap = async () => {
 
 // fetch new data from API in each 150 seconds (15 seconds per sale, 10 sale)
 setInterval(fetchRecentSales, PRODUCT_COUNT * PRODUCT_SHOW_DURATION);
+// fetch new data from API in each 150 seconds (15 seconds per sale, 10 sale)
+setInterval(fetchCitySales, 60000);
+// immediately fetch city list data
+fetchCitySales();
 // fetch first batch of sale immediately
 fetchRecentSales();
 // iterate to next sale on fetched data in each 15 seconds
