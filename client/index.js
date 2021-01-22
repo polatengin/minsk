@@ -10,3 +10,9 @@ const fillColor = "#2064aa";
 const PRODUCT_COUNT = 10;
 const PRODUCT_SHOW_DURATION = 15 * 1000; // in seconds
 
+
+const showNextData = async () => {
+  // get current sale info from fetched data
+  const currentData = data[currentIndex];
+
+};
