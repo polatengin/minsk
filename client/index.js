@@ -31,7 +31,7 @@ const fetchData = async () => {
   // start showing product sales on map from first item
   currentIndex = 0;
 
-  showNextData();
+  showNextSaleOnMap();
 };
 
 const showNextSaleOnMap = async () => {
