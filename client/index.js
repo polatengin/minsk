@@ -17,4 +17,8 @@ const showNextData = async () => {
 
   mapElement.querySelectorAll("g").forEach(e => e.setAttribute("fill", defaultColor));
 
+  // center map to current sale location
+  const cityElement = mapElement.getElementsByClassName(`city-${currentData.cityCode}`)[0];
+  cityElement.setAttribute("fill", fillColor);
+
 };
