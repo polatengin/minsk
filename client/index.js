@@ -15,4 +15,6 @@ const showNextData = async () => {
   // get current sale info from fetched data
   const currentData = data[currentIndex];
 
+  mapElement.querySelectorAll("g").forEach(e => e.setAttribute("fill", defaultColor));
+
 };
