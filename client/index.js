@@ -21,4 +21,7 @@ const showNextData = async () => {
   const cityElement = mapElement.getElementsByClassName(`city-${currentData.cityCode}`)[0];
   cityElement.setAttribute("fill", fillColor);
 
+  cityNameElement.innerText = cityElement.getAttribute("data-cityname");
+  quantityElement.innerText = currentData.quantity;
+  productNameElement.innerText = currentData.productName;
 };
