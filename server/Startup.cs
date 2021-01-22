@@ -35,7 +35,7 @@ namespace server
 
       app.UseCors("dev");
 
-      app.Map("", builder =>
+      app.Map("/recent-sales", builder =>
       {
         builder.Run(async context =>
         {
