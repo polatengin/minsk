@@ -63,3 +63,5 @@ setInterval(fetchData, PRODUCT_COUNT * PRODUCT_SHOW_DURATION);
 fetchData();
 // iterate to next sale on fetched data in each 15 seconds
 setInterval(showNextData, PRODUCT_SHOW_DURATION);
+
+setInterval(scrollMarquee, 12);
