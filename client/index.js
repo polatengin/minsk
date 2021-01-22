@@ -34,7 +34,7 @@ const fetchData = async () => {
   showNextData();
 };
 
-const showNextData = async () => {
+const showNextSaleOnMap = async () => {
   // get current sale info from fetched data
   const currentData = data[currentIndex];
 
