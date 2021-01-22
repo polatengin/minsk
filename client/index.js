@@ -1,5 +1,7 @@
 const mapElement = document.getElementById("map");
 
+const marqueeElement = document.getElementById("marquee");
+
 const cityNameElement = document.getElementById("cityName");
 const productNameElement = document.getElementById("productName");
 const quantityElement = document.getElementById("quantity");
