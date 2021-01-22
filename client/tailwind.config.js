@@ -15,6 +15,9 @@ module.exports = {
           "100%": { transform: "translate(-100%, 0)" },
         }
       },
+      animation: {
+        marquee: 'marquee 10s linear infinite',
+      }
     },
   },
   variants: {
