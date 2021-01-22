@@ -24,9 +24,24 @@ const scrollMarquee = () => {
   }
 };
 
-const fetchData = async () => {
+const fetchCitySales = async () => {
   // fetch latest product sale data from API
-  data = await (await fetch("http://localhost:5000")).json();
+  data = await (await fetch(`${API_ENDPOINT}/city-sales`)).json();
+
+  const pElement = marqueeElement.getElementsByTagName("p")[0];
+  pElement.innerText = "";
+
+  data.forEach(cityData => {
+    const spanElement = document.createElement("span");
+    spanElement.classList="mx-10 whitespace-nowrap ";
+    spanElement.innerText = `${cityData.cityName} : ${cityData.quantity} adet`;
+    pElement.appendChild(spanElement);
+  });
+};
+
+const fetchRecentSales = async () => {
+  // fetch latest product sale data from API
+  data = await (await fetch(`${API_ENDPOINT}/recent-sales`)).json();
 
   // start showing product sales on map from first item
   currentIndex = 0;
