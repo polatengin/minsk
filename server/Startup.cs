@@ -28,6 +28,8 @@ namespace server
       {
         app.UseDeveloperExceptionPage();
       }
+
+      app.UseCors("dev");
     }
   }
 }
