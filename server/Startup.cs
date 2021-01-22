@@ -49,6 +49,16 @@ namespace server
           await context.Response.WriteAsJsonAsync(model);
         });
       });
+
+      app.Map("/city-sales", builder =>
+      {
+        builder.Run(async context =>
+        {
+          var model = cityList.Select(e => new { cityName = e, quantity = random.Next(1, 1000) });
+
+          await context.Response.WriteAsJsonAsync(model);
+        });
+      });
     }
   }
 }
