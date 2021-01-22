@@ -24,4 +24,10 @@ const showNextData = async () => {
   cityNameElement.innerText = cityElement.getAttribute("data-cityname");
   quantityElement.innerText = currentData.quantity;
   productNameElement.innerText = currentData.productName;
+
+  // iterate to next sale data
+  currentIndex++;
+  if (currentIndex >= data.length) {
+    currentIndex = 0;
+  }
 };
