@@ -27,15 +27,18 @@ const showNextData = async () => {
   // get current sale info from fetched data
   const currentData = data[currentIndex];
 
-  mapElement.querySelectorAll("g").forEach(e => e.setAttribute("fill", defaultColor));
-
   // center map to current sale location
   const cityElement = mapElement.getElementsByClassName(`city-${currentData.cityCode}`)[0];
-  cityElement.setAttribute("fill", fillColor);
 
-  cityNameElement.innerText = cityElement.getAttribute("data-cityname");
-  quantityElement.innerText = currentData.quantity;
-  productNameElement.innerText = currentData.productName;
+  if (cityElement) {
+    mapElement.querySelectorAll("g").forEach(e => e.setAttribute("fill", defaultColor));
+
+    cityElement.setAttribute("fill", fillColor);
+
+    cityNameElement.innerText = cityElement.getAttribute("data-cityname");
+    quantityElement.innerText = currentData.quantity;
+    productNameElement.innerText = currentData.productName;
+  }
 
   // iterate to next sale data
   currentIndex++;
