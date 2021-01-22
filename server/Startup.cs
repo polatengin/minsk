@@ -22,6 +22,9 @@ namespace server
         });
       });
     }
+
+    private Random random = new Random();
+
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       if (env.IsDevelopment())
@@ -30,6 +33,21 @@ namespace server
       }
 
       app.UseCors("dev");
+
+      app.Map("", builder =>
+      {
+        builder.Run(async context =>
+        {
+          var model = Enumerable.Range(1, 10).Select(e => new
+          {
+            cityCode = random.Next(1, 82),
+            productName = $"Urun {e}",
+            quantity = random.Next(1, 100)
+          });
+
+          await context.Response.WriteAsJsonAsync(model);
+        });
+      });
     }
   }
 }
