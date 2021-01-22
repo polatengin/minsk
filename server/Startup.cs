@@ -12,6 +12,15 @@ namespace server
   {
     public void ConfigureServices(IServiceCollection services)
     {
+      services.AddCors(options =>
+      {
+        options.AddPolicy("dev", builder =>
+        {
+          builder.AllowAnyHeader();
+          builder.AllowAnyMethod();
+          builder.AllowAnyOrigin();
+        });
+      });
     }
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
