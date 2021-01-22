@@ -15,6 +15,14 @@ const PRODUCT_SHOW_DURATION = 15 * 1000; // in seconds
 let data = [];
 let currentIndex = 0;
 
+const scrollMarquee = () => {
+  marqueeElement.scrollBy(0.8, 0);
+
+  if (marqueeElement.scrollLeft >= marqueeElement.scrollWidth - marqueeElement.offsetWidth) {
+    marqueeElement.scrollTo(0, 0);
+  }
+};
+
 const fetchData = async () => {
   // fetch latest product sale data from API
   data = await (await fetch("http://localhost:5000")).json();
