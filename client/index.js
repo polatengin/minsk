@@ -34,3 +34,5 @@ const showNextData = async () => {
 
 // fetch new data from API in each 150 seconds (15 seconds per sale, 10 sale)
 setInterval(fetchData, PRODUCT_COUNT * PRODUCT_SHOW_DURATION);
+// fetch first batch of sale immediately
+fetchData();
