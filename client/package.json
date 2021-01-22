@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "npx tailwindcss-cli build ./tailwind.css -o ./index.css && http-server"
   },
   "keywords": [],
   "author": "",
