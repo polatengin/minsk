@@ -23,3 +23,7 @@ npm run start
 ```
 
 [http-server](https://www.npmjs.com/package/http-server) will start serving the client app on [http://localhost:8080](http://localhost:8080)
+
+## References
+
+[SVG Turkey Map](https://dnomak.com/svg-turkiye-haritasi/)
