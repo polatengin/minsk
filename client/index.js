@@ -44,6 +44,7 @@ const fetchCitySales = async () => {
 };
 
 const updateTotalSaleCounter = () => {
+  const current = Number(soldProductCount.innerText);
 };
 
 const fetchRecentSales = async () => {
