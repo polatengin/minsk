@@ -28,13 +28,14 @@ const scrollMarquee = () => {
 };
 
 const fetchCitySales = async () => {
-  // fetch latest product sale data from API
-  data = await (await fetch(`${API_ENDPOINT}/city-sales`)).json();
-
+  // clear marquee element first
   const pElement = marqueeElement.getElementsByTagName("p")[0];
   pElement.innerText = "";
 
-  data.forEach(cityData => {
+  // fetch latest product sale data from API
+  const _ = await (await fetch(`${API_ENDPOINT}/city-sales`)).json();
+
+  _.forEach(cityData => {
     const spanElement = document.createElement("span");
     spanElement.classList="mx-10 whitespace-nowrap ";
     spanElement.innerText = `${cityData.cityName} : ${cityData.quantity} adet`;
