@@ -45,7 +45,12 @@ const fetchCitySales = async () => {
 
 const fetchRecentSales = async () => {
   // fetch latest product sale data from API
-  data = await (await fetch(`${API_ENDPOINT}/recent-sales`)).json();
+  const _ = await (await fetch(`${API_ENDPOINT}/recent-sales`)).json();
+
+  data = _.sales;
+  total = _.total;
+
+  updateTotalSaleCounter();
 
   // start showing product sales on map from first item
   currentIndex = 0;
