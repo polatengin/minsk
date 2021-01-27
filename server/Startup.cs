@@ -23,7 +23,7 @@ namespace server
       });
     }
 
-    private Random random = new Random();
+    private Random _random = new Random();
     private string[] cityList = new string[] { "İstanbul", "Ankara", "İzmir", "Adana", "Adıyaman", "Afyonkarahisar", "Ağrı", "Aksaray", "Amasya", "Antalya", "Ardahan", "Artvin", "Aydın", "Balıkesir", "Bartın", "Batman", "Bayburt", "Bilecik", "Bingöl", "Bitlis", "Bolu", "Burdur", "Bursa", "Çanakkale", "Çankırı", "Çorum", "Denizli", "Diyarbakır", "Düzce", "Edirne", "Elazığ", "Erzincan", "Erzurum", "Eskişehir", "Gaziantep", "Giresun", "Gümüşhane", "Hakkari", "Hatay", "Iğdır", "Isparta", "Kahramanmaraş", "Karabük", "Karaman", "Kars", "Kastamonu", "Kayseri", "Kırıkkale", "Kırklareli", "Kırşehir", "Kilis", "Kocaeli", "Konya", "Kütahya", "Malatya", "Manisa", "Mardin", "Mersin", "Muğla", "Muş", "Nevşehir", "Niğde", "Ordu", "Osmaniye", "Rize", "Sakarya", "Samsun", "Siirt", "Sinop", "Sivas", "Şırnak", "Tekirdağ", "Tokat", "Trabzon", "Tunceli", "Şanlıurfa", "Uşak", "Van", "Yalova", "Yozgat", "Zonguldak" };
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -54,7 +54,7 @@ namespace server
       {
         builder.Run(async context =>
         {
-          var model = cityList.Select(e => new { cityName = e, quantity = random.Next(1, 1000) });
+          var model = cityList.Select(e => new { cityName = e, quantity = _random.Next(1, 1000) });
 
           await context.Response.WriteAsJsonAsync(model);
         });
