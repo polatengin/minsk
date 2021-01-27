@@ -43,6 +43,9 @@ const fetchCitySales = async () => {
   });
 };
 
+const updateTotalSaleCounter = () => {
+};
+
 const fetchRecentSales = async () => {
   // fetch latest product sale data from API
   const _ = await (await fetch(`${API_ENDPOINT}/recent-sales`)).json();
