@@ -16,6 +16,7 @@ const PRODUCT_COUNT = 10;
 const PRODUCT_SHOW_DURATION = 3 * 1000; // in seconds
 
 let data = [];
+let total = 0;
 let currentIndex = 0;
 
 const scrollMarquee = () => {
