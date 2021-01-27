@@ -6,6 +6,8 @@ const cityNameElement = document.getElementById("cityName");
 const productNameElement = document.getElementById("productName");
 const quantityElement = document.getElementById("quantity");
 
+const soldProductCount = document.getElementById("soldProductCount");
+
 const defaultColor = "#e4e4e4";
 const fillColor = "#2064aa";
 
