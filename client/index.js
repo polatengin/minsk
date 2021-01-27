@@ -51,6 +51,7 @@ const updateTotalSaleCounter = () => {
   let _index = 0;
 
   let interval = setInterval(() => {
+    const temp = Number(soldProductCount.innerText);
     _index++;
 
     if (_index == 8) {
