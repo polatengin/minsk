@@ -51,6 +51,11 @@ const updateTotalSaleCounter = () => {
   let _index = 0;
 
   let interval = setInterval(() => {
+    _index++;
+
+    if (_index == 8) {
+      clearInterval(interval);
+    }
   }, 150);
 };
 
