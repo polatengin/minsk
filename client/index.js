@@ -45,6 +45,7 @@ const fetchCitySales = async () => {
 
 const updateTotalSaleCounter = () => {
   const current = Number(soldProductCount.innerText);
+  const step = parseInt((total - current) / 8);
 };
 
 const fetchRecentSales = async () => {
